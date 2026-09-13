@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Catálogos',
+  title: 'Catálogos Dimarca',
   description: 'Consulta y descarga nuestros catálogos en PDF.',
 }
 

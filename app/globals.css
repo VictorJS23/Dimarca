@@ -1,0 +1,192 @@
+:root {
+  --ink: #1b2420;
+  --paper: #eef0ec;
+  --card: #ffffff;
+  --forest: #1f5d4e;
+  --forest-dark: #12362d;
+  --muted: #5c6b63;
+  --danger: #a32d2d;
+  --border: #d7dbd3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.site-header h1,
+.admin-header h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.site-header p {
+  color: var(--muted);
+  margin: 0 0 40px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.catalogo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catalogo-thumb {
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.catalogo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.catalogo-card h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.catalogo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+.btn-primary {
+  background: var(--forest);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--forest-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--forest);
+  border: 1px solid var(--forest);
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  width: 100%;
+}
+
+.empty-state {
+  color: var(--muted);
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.login-form label,
+.catalogo-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.login-form input,
+.catalogo-form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.error-text {
+  color: var(--danger);
+  font-size: 14px;
+  margin: 0;
+}
+
+.catalogo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 420px;
+}
